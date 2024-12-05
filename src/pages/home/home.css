@@ -1,0 +1,90 @@
+.home-cover {
+    width: 100wv;
+    height: 90vh;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+.shadow-cover {
+    content: '';
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    height: 100vh;
+    background: 
+    linear-gradient(180deg, white, transparent 80%);
+}
+
+.home-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 70vw;
+    right: 15%;
+    height: inherit;
+    text-transform: capitalize;
+    p {
+        margin: 20px 0;
+        color: #2F3645;
+    }
+}
+
+.home-content .action {
+    button {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: var(--color1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--color1);
+        color: white;
+    }
+}
+
+.home-labelInformation {
+    display: flex;
+    background-color: var(--color1);
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    color: white;
+    margin-bottom: 40px;
+
+    .detail {
+        display: flex;
+    }
+
+    .desc {
+        margin-left: 10px;
+        width: 90px;
+    }
+}
+
+.home-product {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.home-product .label {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-cardProduct .card {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 20px;
+}
