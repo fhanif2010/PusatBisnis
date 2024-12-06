@@ -71,7 +71,6 @@
 }
 
 .home-product {
-    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -83,8 +82,43 @@
 }
 
 .home-cardProduct .card {
-    width: 200px;
+    width: 180px;
     height: 200px;
-    background-color: aqua;
     padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid var(--color2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);;
+}
+
+.home-cardProduct .card .icon {
+    background-color: rgba(51, 93, 209, 0.219);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.home-cardProduct .card .detail {
+    h2 {
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 12px;
+        color: #2F3645;
+    }
+    margin-bottom: 10px;
+}
+
+.home-cardProduct .card .action {
+    display: flex;
+    color: var(--color1);
+}
+
+.home-cardProduct .card .action:hover {
+    cursor: pointer;
 }

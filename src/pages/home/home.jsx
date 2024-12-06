@@ -56,14 +56,14 @@ function Home() {
         </div>
         <div className='home-cardProduct'>
           <div className='card'>
-            <div>
+            <div className='icon'>
               <FaHotel />
             </div>
-            <div>
+            <div className='detail'>
               <h2>Hotel</h2>
               <p>tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.</p>
             </div>
-            <div>
+            <div className='action'>
               <p>Learn More</p>
               <IoIosArrowForward />
             </div>
