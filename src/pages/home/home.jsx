@@ -4,7 +4,7 @@ import Cover from '../../../public/cover.jpg'
 import CoverMap from '../../../public/map.png'
 import './home.css'
 
-import { FaHotel } from "react-icons/fa";
+import * as Icons from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
 
 function Home() {
@@ -19,13 +19,13 @@ function Home() {
       name: 'Klinik Pratama',
       detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
       navigation: './product',
-      icon: 'FaHotel',
+      icon: 'FaHandHoldingMedical',
     },
     {
       name: 'IT For Public',
       detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
       navigation: './product',
-      icon: 'FaHotel',
+      icon: 'FaSitemap',
     },
     {
       name: 'Balai Sidang',
@@ -37,8 +37,27 @@ function Home() {
       name: 'Training Institute',
       detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
       navigation: './product',
-      icon: 'FaHotel',
+      icon: 'FaUsers',
     },
+  ]
+
+  const DataLabel = [
+    {
+      qty: 8,
+      name: 'Bisnis Berjalan'
+    },
+    {
+      qty: 12,
+      name: 'Mitra Kerjasama'
+    },
+    {
+      qty: 210,
+      name: 'Pegawai Aktif'
+    },
+    {
+      qty: 20,
+      name: 'Penghargaan Bisnis'
+    }
   ]
   return (
     <>
@@ -56,55 +75,43 @@ function Home() {
           <div className='shadow-cover'></div>
         </div>
         <div className='home-labelInformation'>
-          <div className='detail'>
-            <h1>8+</h1>
-            <div className='desc'>
-              <p>Bisnis Berjalan</p>
+          {DataLabel.map((data, index) => {
+            <div key={index} className='detail'>
+              <h1>{data.qty}+</h1>
+              <div className='desc'>
+                <p>{data.name}</p>
+              </div>
             </div>
-          </div>
-          <div className='detail'>
-            <h1>12+</h1>
-            <div className='desc'>
-              <p>Mitra Kerjasama</p>
-            </div>
-          </div>
-          <div className='detail'>
-            <h1>210+</h1>
-            <div className='desc'>
-              <p>Pegawai Aktif</p>
-            </div>
-          </div>
-          <div className='detail'>
-            <h1>20+</h1>
-            <div className='desc'>
-              <p>Penghargaan Bisnis</p>
-            </div>
-          </div>
+          })}
         </div>
       </div>
-      <div className='home-product' style={{backgroundImage: `url(${CoverMap})`}}>
-        <div className='label'>
-          <h2>Produk Kami Dapat Membantu Anda</h2>
-          <p>Kami dapat menyesuaikan bisnis yang anda inginkan</p>
-        </div>
-        <div className='home-cardProduct'>
-          {Product.map((data, index) =>
-            <div key={index} className='card'>
-              <div className='icon'>
-                <FaHotel/>
-              </div>
-              <div className='detail'>
-                <h2>{data.name}</h2>
-                <p>{data.detail}</p>
-              </div>
-              <div className='action'>
-                <p>Learn More</p>
-                <IoIosArrowForward />
-              </div>
-            </div>
-          )
-          }
 
+      <div className='home-product' style={{ backgroundImage: `url(${CoverMap})` }}>
+        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', height: 'inherit' }}>
+          <div className='label'>
+            <h2>Produk Kami Dapat Membantu Anda</h2>
+            <p>Kami dapat menyesuaikan bisnis yang anda inginkan</p>
+          </div>
+          <div className='home-cardProduct'>
+            {Product.map((data, index) => {
+              const IconComponent = Icons[data.icon];
+              return (
+                <div key={index} className='card'>
+                <div className='icon'>
+                  <IconComponent />
+                </div>
+                <div className='detail'>
+                  <h2>{data.name}</h2>
+                  <p>{data.detail}</p>
+                </div>
+                <div className='action'>
+                  <p>Learn More</p>
+                  <IoIosArrowForward />
+                </div>
+              </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </>

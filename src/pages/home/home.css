@@ -41,13 +41,14 @@
         background-color: white;
         color: var(--color1);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+        transition: transform .2s;
     }
 
     button:hover {
         cursor: pointer;
         background-color: var(--color1);
         color: white;
+        transform: scale(1.1);
     }
 }
 
@@ -73,13 +74,15 @@
 .home-product {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 60vh;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .home-product .label {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .home-cardProduct {
@@ -94,7 +97,18 @@
     padding: 20px;
     border-radius: 10px;
     border: 0.5px solid var(--color2);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: transform .2s;
+}
+
+.home-cardProduct .card:hover {
+    box-shadow: 0 2px 4px 0 rgb(4, 30, 102);
+    transform: scale(1.04);
+}
+
+.home-cardProduct .card:hover .icon {
+    background-color: var(--color1);
 }
 
 .home-cardProduct .card .icon {
