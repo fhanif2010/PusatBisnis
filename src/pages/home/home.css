@@ -58,7 +58,7 @@
     gap: 20px;
     padding: 30px 0;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 5rem;
 
     .detail {
         display: flex;
@@ -73,12 +73,19 @@
 .home-product {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 70vh;
+    background-size: contain;
 }
 
 .home-product .label {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 8rem;
+}
+
+.home-cardProduct {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .home-cardProduct .card {

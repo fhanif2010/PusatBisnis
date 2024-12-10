@@ -1,12 +1,45 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar';
 import Cover from '../../../public/cover.jpg'
+import CoverMap from '../../../public/map.png'
 import './home.css'
 
 import { FaHotel } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 
 function Home() {
+  const Product = [
+    {
+      name: 'Hotel',
+      detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
+      navigation: './product',
+      icon: 'FaHotel',
+    },
+    {
+      name: 'Klinik Pratama',
+      detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
+      navigation: './product',
+      icon: 'FaHotel',
+    },
+    {
+      name: 'IT For Public',
+      detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
+      navigation: './product',
+      icon: 'FaHotel',
+    },
+    {
+      name: 'Balai Sidang',
+      detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
+      navigation: './product',
+      icon: 'FaHotel',
+    },
+    {
+      name: 'Training Institute',
+      detail: 'tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.',
+      navigation: './product',
+      icon: 'FaHotel',
+    },
+  ]
   return (
     <>
       <Navbar />
@@ -49,25 +82,29 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='home-product'>
+      <div className='home-product' style={{backgroundImage: `url(${CoverMap})`}}>
         <div className='label'>
           <h2>Produk Kami Dapat Membantu Anda</h2>
           <p>Kami dapat menyesuaikan bisnis yang anda inginkan</p>
         </div>
         <div className='home-cardProduct'>
-          <div className='card'>
-            <div className='icon'>
-              <FaHotel />
+          {Product.map((data, index) =>
+            <div key={index} className='card'>
+              <div className='icon'>
+                <FaHotel/>
+              </div>
+              <div className='detail'>
+                <h2>{data.name}</h2>
+                <p>{data.detail}</p>
+              </div>
+              <div className='action'>
+                <p>Learn More</p>
+                <IoIosArrowForward />
+              </div>
             </div>
-            <div className='detail'>
-              <h2>Hotel</h2>
-              <p>tempat penginapan kami setara hotel bintang 4, dengan suasana yang segar dan sunyi.</p>
-            </div>
-            <div className='action'>
-              <p>Learn More</p>
-              <IoIosArrowForward />
-            </div>
-          </div>
+          )
+          }
+
         </div>
       </div>
     </>
