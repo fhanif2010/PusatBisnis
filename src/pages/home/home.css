@@ -11,8 +11,8 @@
     z-index: 100;
     background-color: white;
     height: 100vh;
-    background: 
-    linear-gradient(180deg, white, transparent 80%);
+    background:
+        linear-gradient(180deg, white, transparent 80%);
 }
 
 .home-content {
@@ -25,6 +25,7 @@
     right: 15%;
     height: inherit;
     text-transform: capitalize;
+
     p {
         margin: 20px 0;
         color: #2F3645;
@@ -128,10 +129,12 @@
     h2 {
         margin-bottom: 10px;
     }
+
     p {
         font-size: 12px;
         color: #2F3645;
     }
+
     margin-bottom: 10px;
 }
 
@@ -142,4 +145,50 @@
 
 .home-cardProduct .card .action:hover {
     cursor: pointer;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-aboutme {
+    display: flex;
+    width: 75vw;
+}
+
+.home-aboutme .detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        color: var(--color1);
+    }
+    h3 {
+        margin: 10px 0 20px;
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 20px;        
+    }
+    button {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+    }
+}
+
+.home-aboutme .image {
+    width: 50%;
+
+    img {
+        width: 100%;
+        height: 400px;
+        border-radius: 50px 0 50px 50px;
+    }
 }

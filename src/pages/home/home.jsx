@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar';
 import Cover from '../../../public/cover.jpg'
 import CoverMap from '../../../public/map.png'
+import Klinik from '../../../public/Klinik.jpg'
 import './home.css'
 
 import * as Icons from 'react-icons/fa';
@@ -75,14 +76,14 @@ function Home() {
           <div className='shadow-cover'></div>
         </div>
         <div className='home-labelInformation'>
-          {DataLabel.map((data, index) => {
+          {DataLabel.map((data, index) => 
             <div key={index} className='detail'>
               <h1>{data.qty}+</h1>
               <div className='desc'>
                 <p>{data.name}</p>
               </div>
             </div>
-          })}
+          )}
         </div>
       </div>
 
@@ -113,6 +114,22 @@ function Home() {
             })}
           </div>
         </div>
+      </div>
+
+      <div className='home-container'>
+        <div className='home-aboutme'>
+            <div className='detail'>
+              <h1>About Us</h1>
+              <h3>Boosts Your Business With Analay</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio doloremque autem quis eius tenetur voluptatibus veniam ex? Iure, magnam itaque beatae voluptas quaerat aut officia amet consectetur eaque labore?</p>
+              <div>
+                <button>More Detail</button>
+              </div>
+            </div>
+            <div className='image'>
+              <img src={Klinik}/> 
+            </div>
+            </div>
       </div>
     </>
   )
