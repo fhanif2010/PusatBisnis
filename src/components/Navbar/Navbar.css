@@ -8,6 +8,12 @@
     align-items: center;
     z-index: 100;
     font-family: "Roboto", sans-serif;
+    transition:  .4s ease-in;
+}
+
+.nav-container-bg {
+    background-color: white;
+    box-shadow: 5px 1px 10px 1px #888888;
 }
 
 .nav-content {

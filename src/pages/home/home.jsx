@@ -7,6 +7,7 @@ import './home.css'
 
 import * as Icons from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
+import Button from '../../components/Button/Button';
 
 function Home() {
   const Product = [
@@ -69,14 +70,12 @@ function Home() {
             <h2>Selamat Datang Di Pusat Pengembangan Bisnis dan Investasi</h2>
             <h2>Lembaga yang bertujuan untuk mendukung pertumbuhan dan pengembangan bisnis di Universitas Terbuka</h2>
             <p>menyediakan berbagai layanan dan sumber daya kepada pemilik bisnis, pengusaha, atau calon pengusaha yang ingin meningkatkan kinerja dan kesuksesan bisnis mereka. Fungsi dan layanan yang ditawarkan oleh Pusat Pengembangan Bisnis dapat bervariasi tergantung pada negara, wilayah, atau lembaga yang bersangkutan,</p>
-            <div className='action'>
-              <button>Contact Us</button>
-            </div>
+            <Button caption={'Contact Us'} />
           </div>
           <div className='shadow-cover'></div>
         </div>
         <div className='home-labelInformation'>
-          {DataLabel.map((data, index) => 
+          {DataLabel.map((data, index) =>
             <div key={index} className='detail'>
               <h1>{data.qty}+</h1>
               <div className='desc'>
@@ -98,18 +97,18 @@ function Home() {
               const IconComponent = Icons[data.icon];
               return (
                 <div key={index} className='card'>
-                <div className='icon'>
-                  <IconComponent />
+                  <div className='icon'>
+                    <IconComponent />
+                  </div>
+                  <div className='detail'>
+                    <h2>{data.name}</h2>
+                    <p>{data.detail}</p>
+                  </div>
+                  <div className='action'>
+                    <p>Learn More</p>
+                    <IoIosArrowForward />
+                  </div>
                 </div>
-                <div className='detail'>
-                  <h2>{data.name}</h2>
-                  <p>{data.detail}</p>
-                </div>
-                <div className='action'>
-                  <p>Learn More</p>
-                  <IoIosArrowForward />
-                </div>
-              </div>
               )
             })}
           </div>
@@ -118,18 +117,18 @@ function Home() {
 
       <div className='home-container'>
         <div className='home-aboutme'>
-            <div className='detail'>
+          <div className='detail'>
+            <div style={{}}>
               <h1>About Us</h1>
               <h3>Boosts Your Business With Analay</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio doloremque autem quis eius tenetur voluptatibus veniam ex? Iure, magnam itaque beatae voluptas quaerat aut officia amet consectetur eaque labore?</p>
-              <div>
-                <button>More Detail</button>
-              </div>
+              <Button caption={'More Detail'} />
             </div>
-            <div className='image'>
-              <img src={Klinik}/> 
-            </div>
-            </div>
+          </div>
+          <div className='image'>
+            <img src={Klinik} />
+          </div>
+        </div>
       </div>
     </>
   )

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import { LuShoppingBag } from "react-icons/lu";
 import { FiMenu } from "react-icons/fi";
 
 function Navbar() {
@@ -9,8 +8,20 @@ function Navbar() {
     setMenuActive(!menuActive)
   }
 
+  //change color navbar after scrolle down
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 150) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeColor)
+
   return (
-    <div className='nav-container'>
+    <div className={color ? 'nav-container nav-container-bg' : 'nav-container'}>
       <p>Company <span className=''>Corporate</span></p>
       <div className='nav-content'>
         <div className={menuActive ? "nav-fullscreentrue" : "nav-fullscreen"}>
