@@ -8,7 +8,6 @@
     align-items: center;
     z-index: 100;
     font-family: "Roboto", sans-serif;
-    transition:  .4s ease-in;
 }
 
 .nav-container-bg {

@@ -130,6 +130,24 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div className="home-container">
+        <div className="home-review">
+          <div className="label">
+            <h2>Review</h2>
+            <p>Discover what my client and colleagues have to say about working with me</p>
+          </div>
+          <div className="card-review">
+            <div className="image">
+
+            </div>
+            <div className="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum, atque nobis sed cupiditate quam iste perferendis fuga suscipit repellat assumenda eveniet odio doloremque magni praesentium accusamus, quisquam incidunt</p>
+                <h4>Kevin Arjuno - Universitas Malut</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
