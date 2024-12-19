@@ -8,6 +8,7 @@ import './home.css'
 import * as Icons from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
 import Button from '../../components/Button/Button';
+import Review from '../../components/Review/Review';
 
 function Home() {
   const Product = [
@@ -137,15 +138,7 @@ function Home() {
             <h2>Review</h2>
             <p>Discover what my client and colleagues have to say about working with me</p>
           </div>
-          <div className="card-review">
-            <div className="image">
-
-            </div>
-            <div className="content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum, atque nobis sed cupiditate quam iste perferendis fuga suscipit repellat assumenda eveniet odio doloremque magni praesentium accusamus, quisquam incidunt</p>
-                <h4>Kevin Arjuno - Universitas Malut</h4>
-            </div>
-          </div>
+          <Review />
         </div>
       </div>
     </>
