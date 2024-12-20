@@ -38,6 +38,8 @@ export default function Review() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 768,
@@ -49,7 +51,28 @@ export default function Review() {
             }
         ]
     };
-    
+
+function SampleNextArrow(props) {
+const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
 
     return (
         <div className="review-container">
